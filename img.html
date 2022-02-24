@@ -1,0 +1,115 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanna Sneak Peak?</title>
+    <link rel="icon" href="photo/GB.png">
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="scontainer">
+        <a href="index.html"><img src="photo/beyond.png" class="beyond2"></a>
+
+    <div class="con">
+        <h3>The Times</h3>
+        <div class="mySlides">
+            <div class="numbertext">1 / 7</div>
+              <img src="photo/1.jpg" style="width:50%">
+          </div>
+        
+          <div class="mySlides">
+            <div class="numbertext">2 / 7</div>
+              <img src="photo/2.jpg" style="width:33%">
+          </div>
+        
+          <div class="mySlides">
+            <div class="numbertext">3 / 7</div>
+              <img src="photo/3.jpg" style="width:23%">
+          </div>
+        
+          <div class="mySlides">
+            <div class="numbertext">4 / 7</div>
+              <img src="photo/4.jpg" style="width:25%">
+          </div>
+        
+          <div class="mySlides">
+            <div class="numbertext">5 / 7</div>
+              <img src="photo/5.jpg" style="width:23%">
+          </div>
+        
+          <div class="mySlides">
+            <div class="numbertext">6 / 7</div>
+              <img src="photo/6.jpg" style="width:43%">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">7 / 7</div>
+              <img src="photo/7.jpg" style="width:43%">
+          </div>
+        
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          
+          <div class="caption-con">
+              <p id="caption"></p>
+          </div>
+          
+          <div class="roww">
+            <div class="column">
+              <img class="demo cursor" src="photo/1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Done With UPRAK!">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="photo/2.jpg" style="width:80%" onclick="currentSlide(2)" alt="Lil Mirror Selfie sesh">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="photo/3.jpg" style="width:70%" onclick="currentSlide(3)" alt="The Photo At The Cinema">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="photo/4.jpg" style="width:70%" onclick="currentSlide(4)" alt="The One That Made To The Feeds">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="photo/5.jpg" style="width:70%" onclick="currentSlide(5)" alt="The One Like The Pinterest">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="photo/6.jpg" style="width:80%" onclick="currentSlide(6)" alt="Mirror Selfie Bathroom ver.">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="photo/7.jpg" style="width:70%" onclick="currentSlide(7)" alt="Have A Pic With Our Pet's Food">
+            </div>
+          </div>
+        </div>
+    </div>
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
+</body>
+</html>
+

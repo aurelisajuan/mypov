@@ -1,0 +1,139 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurelisa Juan S. | 12 MIPA 2/6</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="photo/GB.png">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a href="index.html"><img src="photo/beyond.png" class="beyond"></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html#acontainer">ABOUT ME</a></li>
+                    <li><a href="music.html">PLAYLIST</a></li>
+                    <li><a href="index.html#rcontainer">RANDOM FACTS!</a></li>
+                </ul>
+            </nav>
+        </div>
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+        <div class="row">
+            <div class="col">
+                <h1>Aurelisa Juan S.</h1>
+                <p>Hi there! My name, as you can tell from above, is Aurelisa Juan S. (12-MIPA 2/6). I am currently a highschooler struggling to stay alive and pass this 12th grade so that I can pursue my dreams to go into my dream university. Using this website as my personal blog may be an advantage for me and also lets me do whatever I want. Thanks for reading, now if you're still interested, you can just roam around. See ya!</p>
+                <button type="button"><a href="img.html">Wanna Sneak Peak?</a></button>
+            </div>
+            <div class="col">
+                <div class="carrd">
+                <div class="card card1">
+                    <h5>P.L.A.T.F.O.R.M<a href="platform.html">
+                        <img alt="P.L.A.T.F.O.R.M" src="photo/sm.png"
+                        width=105%></a></h5>
+                </div>
+                <div class="card card2">
+                    <h5>O.O.T.D<a href="ootd.html">
+                        <img alt="O.O.T.D" src="photo/ootd.png"
+                        width=105%></a></h5> 
+                </div>
+                <div class="card card3">
+                    <h5>R.E.L.A.X<a href="relax.html">
+                        <img alt="P.L.A.T.F.O.R.M" src="photo/sr.png"
+                        width=105%></a></h5>
+                </div>
+                <div class="card card4">
+                    <h5>F.R.I.E.N.D.S<a href="friends.html">
+                        <img alt="P.L.A.T.F.O.R.M" src="photo/friends.png"
+                        width=105%></a></h5>
+                </div>
+                </div>
+        </div>
+    </div>
+    <div id="acontainer">
+        <div class="me">
+            <h2>Aurelisa Juan S.</h2>
+            <h3>Student Of SMA Santa Ursula Jakarta</h3>
+            <div class="imgme">
+                <img src="photo/me.png">
+            </div>
+            <p>I am a 17-year-old student from SMA Santa Ursula Jakarta. I am in the natural science program and is very interested in studying programming. I have fun by dancing and singing. Not only that, but I also like to hang around with my friends. I am a very flexible person and is easy to socialize with new people. On this stage of high school, we tend to get lots of group projects. So, with this I am able to improve my teamwork skills and be better at it. </p>
+            <button type="button"><a href="platform.html">More Info ʕ•́ᴥ•̀ʔっ♡ </a></button>
+            </div>
+    </div>
+    
+    <div id="rcontainer">
+        <div class="randomfacts">
+            <h2>Let's See Some Of My Facts!</h2>
+        </div>
+        <div class="facts">
+            <div class="myfacts">
+              <q>I have a twin!</q>
+            </div>
+            
+            <div class="myfacts">
+              <q>I have a cute furry friend named Lucky and he is a very, very, very loud BUT CUTE chihuahua!</q>
+            </div>
+            
+            <div class="myfacts">
+              <q>I am looking forward to university life!</q>
+            </div>
+            
+            <a class="prevv" onclick="plusSlides(-1)">❮</a>
+            <a class="nextt" onclick="plusSlides(1)">❯</a>
+            
+            <div class="dot-container">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+    </div>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("myfacts");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            }
+    </script>
+    <div class="photos">
+        <img src="photo/twins.png">
+        <img src="photo/lucky.png">
+        <img src="photo/uni.png">
+    </div>
+</body>
+</html>
