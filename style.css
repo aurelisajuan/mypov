@@ -159,6 +159,14 @@ h5{
     font-weight: bolder;
     padding-top: 90px;
 }
+.mspoti p{
+    padding-top: 20px;
+    color: #000;
+    font-size: 20px;
+    padding-left: 150px;
+    padding-right: 150px;
+    line-height: 25px;
+}
 
 /*slideshow*/
 * {
